@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+</head>
+<style>
+    
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.invitation,
+.details {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.invitation:hover,
+.details:hover {
+    transform: translateY(-5px);
+}
+
+h1,
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    line-height: 1.5;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e55b50;
+}
+
+.venue-pic,
+.friend-pic {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.friend-name {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+</style>
+
+<body>
+    <div id="container">
+        <div class="invitation">
+            <img src="./invit.jpg " alt="Friend's Photo"  width="200px" height="350px" class="friend-pic">
+            <div class="friend-name">G.Kiran</div>
+            <div class="tagline">2025 GD</div>
+            <h1>You're Invited to a Birthday Party!</h1>
+            <p>Join us to celebrate our dear friend on jan 5th!</p>
+            <p>If you are coming to the party, click the link below for the venue.</p>
+            <button id="rsvpButton">Coming to party</button>
+        </div>
+    </div>
+    <script>
+
+          
+document.getElementById('rsvpButton').addEventListener('click', function() {
+    const container = document.getElementById('container');
+    container.innerHTML = `
+        <div class="details">
+            <h2>Party Details</h2>
+            <p>Venue: Utakonda Chakala Geri, Nandayal City,Andhra Pradesh</p>
+            <img src="bdbg.jpg" alt="Venue" class="venue-pic">
+        </div>
+    `;
+});
+
+
+    </script>
+
+    <!-- <link rel="stylesheet" href="./index.js"> -->
+</body>
+
+</html>
